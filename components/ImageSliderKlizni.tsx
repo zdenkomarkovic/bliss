@@ -6,7 +6,7 @@ import useEmblaCarousel from "embla-carousel-react";
 
 const images = [
   "/BEACH BABE 1 color NEON YELLOW-min.jpg",
-  "/BEACH BABE 2 color NEON ORANGE-min.jpg",
+  "/BEACH BABE 2.1 color NEON ORANGE-min.jpg",
   "/BEACH BABE 3 color NEON ORANGE-min.jpg",
   "/BEACH BABE 4 color NEON ORANGE-min.jpg",
   "/BEACH BABE 4-ispis-min.jpg",
