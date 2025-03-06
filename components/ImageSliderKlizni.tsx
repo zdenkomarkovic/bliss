@@ -17,7 +17,7 @@ const images = [
 const ImageSliderKlizni = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
-    draggable: false,
+    containScroll: "keepSnaps",
   });
   const [activeIndex, setActiveIndex] = useState(0);
 
