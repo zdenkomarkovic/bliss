@@ -6,9 +6,7 @@ import useEmblaCarousel from "embla-carousel-react";
 
 const images = [
   "/BEACH BABE 1 color NEON YELLOW-min.jpg",
-  "/BEACH BABE 1.1 color NEON YELLOW-min.jpg",
   "/BEACH BABE 2 color NEON ORANGE-min.jpg",
-  "/BEACH BABE 2.1 color NEON ORANGE-min.jpg",
   "/BEACH BABE 3 color NEON ORANGE-min.jpg",
   "/BEACH BABE 4 color NEON ORANGE-min.jpg",
   "/BEACH BABE 4-ispis-min.jpg",
@@ -35,16 +33,13 @@ const ImageSliderKlizni = () => {
     };
   }, [emblaApi]);
 
-  // Funkcija za glatko skrolovanje
+  // Funkcija za klizanje bez dodatnih opcija
   const scrollTo = useCallback(
     (index: number) => {
       if (emblaApi) {
         setTimeout(() => {
-          emblaApi.scrollTo(index, {
-            duration: 800, // Animacija traje 800ms
-            easing: (t) => 1 - Math.pow(1 - t, 3), // Cubic easing za prirodan efekat
-          });
-        }, 10); // Kratak delay da sprečimo početno zapinjanje
+          emblaApi.scrollTo(index, false); // Normalno skrolovanje bez animacije
+        }, 10);
       }
     },
     [emblaApi]
@@ -54,13 +49,13 @@ const ImageSliderKlizni = () => {
     <div className="w-full max-w-2xl mx-auto relative">
       {/* Glavni slider */}
       <div className="overflow-hidden relative rounded-lg" ref={emblaRef}>
-        <div className="flex">
+        <div className="flex transition-transform duration-500 ease-in-out">
           {images.map((src, index) => (
             <div key={index} className="min-w-full">
               <img
                 src={src}
                 alt={`Slika ${index + 1}`}
-                className="w-full h-64 object-cover rounded-lg"
+                className="w-full h-screen object-cover rounded-lg"
               />
             </div>
           ))}
