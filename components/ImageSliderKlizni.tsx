@@ -49,7 +49,7 @@ const ImageSliderKlizni = () => {
     <div className="w-full max-w-2xl mx-auto relative">
       {/* Glavni slider */}
       <div className="overflow-hidden relative rounded-lg" ref={emblaRef}>
-        <div className="flex transition-transform duration-500 ease-in-out">
+        <div className="flex transition-transform duration-100 ease-in-out">
           {images.map((src, index) => (
             <div key={index} className="min-w-full">
               <img
