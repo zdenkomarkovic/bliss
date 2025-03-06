@@ -1,6 +1,6 @@
 "use client";
 
-import Hero3 from "../public/hero3.jpg";
+import Hero3 from "../public/visual- izgled feeda 2-min.jpg";
 import Image from "next/image";
 import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";

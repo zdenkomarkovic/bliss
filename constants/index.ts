@@ -272,3 +272,32 @@ export interface Cards2DataText {
 export const cards2DataText: Cards2DataText = {
   text: "Pružamo usluge izrade, montaže i održavanja elektro ormana za domaćinstva, poslovne prostore i industrijska postrojenja. Naš tim vodi računa o kvalitetu instalacija i bezbednosti sistema, uz poštovanje svih standarda i propisa.",
 };
+
+export interface Colections {
+  title: string;
+  price: number;
+  img: string;
+}
+
+export const colections: Colections[] = [
+  {
+    title: "BEACH BABE",
+    price: 200,
+    img: "/BEACH BABE 1 color NEON YELLOW-min.jpg",
+  },
+  {
+    title: "BREEZE",
+    price: 200,
+    img: "/BEACH BABE 1 color NEON YELLOW-min.jpg",
+  },
+  {
+    title: "SHORTS",
+    price: 200,
+    img: "/BEACH BABE 1 color NEON YELLOW-min.jpg",
+  },
+  {
+    title: "THE OG",
+    price: 200,
+    img: "/BEACH BABE 1 color NEON YELLOW-min.jpg",
+  },
+];
