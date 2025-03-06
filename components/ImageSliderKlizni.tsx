@@ -17,31 +17,34 @@ const images = [
 const ImageSliderKlizni = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
-    containScroll: "keepSnaps",
+    containScroll: "keepSnaps", // Sprečava ručno prevlačenje
   });
+
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Prisilno inicijalizujemo carousel da ne bi seckao na početku
   useEffect(() => {
     if (!emblaApi) return;
 
-    emblaApi.scrollTo(activeIndex, false); // Postavljamo startnu poziciju bez animacije
+    emblaApi.scrollTo(activeIndex, false); // Postavljamo početnu sliku bez animacije
 
     const onSelect = () => setActiveIndex(emblaApi.selectedScrollSnap());
     emblaApi.on("select", onSelect);
-    return () => emblaApi.off("select", onSelect);
+
+    return () => {
+      if (emblaApi) emblaApi.off("select", onSelect);
+    };
   }, [emblaApi]);
 
-  // Funkcija za animirano klizanje
+  // Funkcija za glatko skrolovanje
   const scrollTo = useCallback(
     (index: number) => {
       if (emblaApi) {
         setTimeout(() => {
           emblaApi.scrollTo(index, {
-            duration: 800, // 800ms da klizanje bude glatko
+            duration: 800, // Animacija traje 800ms
             easing: (t) => 1 - Math.pow(1 - t, 3), // Cubic easing za prirodan efekat
           });
-        }, 10); // Dajemo Embli malo vremena da se inicijalizuje
+        }, 10); // Kratak delay da sprečimo početno zapinjanje
       }
     },
     [emblaApi]
