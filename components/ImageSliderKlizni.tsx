@@ -20,7 +20,11 @@ const ImageSliderKlizni = ({ images }: { images: string[] }) => {
     const onSelect = () => setActiveIndex(emblaMainApi.selectedScrollSnap());
     emblaMainApi.on("select", onSelect);
 
-    return () => emblaMainApi.off("select", onSelect);
+    return () => {
+      if (emblaMainApi) {
+        emblaMainApi.off("select", onSelect);
+      }
+    };
   }, [emblaMainApi, activeIndex]);
 
   const scrollTo = useCallback(
