@@ -23,9 +23,9 @@ const CardColection = ({
         <div className="w-1/2">
           {data.map((item, i) => {
             return (
-              <div key={i} className="border">
+              <Link href={`/products/${item.id}`} key={i} className="border">
                 <Image
-                  src={item.img}
+                  src={item.img[0]}
                   width={2000}
                   height={2000}
                   alt="kupace gace"
@@ -35,7 +35,7 @@ const CardColection = ({
                   <h4 className="text-lg font-bold">{item.title}</h4>
                   <p>din.{item.price}.00</p>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>

@@ -1,84 +1,97 @@
 "use client";
 
 import React, { useCallback, useEffect, useState } from "react";
-
 import useEmblaCarousel from "embla-carousel-react";
+import Image from "next/image";
 
-const images = [
-  "/BEACH BABE 1 color NEON YELLOW-min.jpg",
-  "/BEACH BABE 2.1 color NEON ORANGE-min.jpg",
-  "/BEACH BABE 3 color NEON ORANGE-min.jpg",
-  "/BEACH BABE 4 color NEON ORANGE-min.jpg",
-  "/BEACH BABE 4-ispis-min.jpg",
-];
-
-const ImageSliderKlizni = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    align: "start",
-    containScroll: "keepSnaps", // Sprečava ručno prevlačenje
+const ImageSliderKlizni = ({ images }: { images: string[] }) => {
+  const [emblaMainRef, emblaMainApi] = useEmblaCarousel({ align: "start" });
+  const [emblaThumbRef, emblaThumbApi] = useEmblaCarousel({
+    containScroll: "trimSnaps",
+    dragFree: true,
   });
 
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    if (!emblaApi) return;
+    if (!emblaMainApi) return;
 
-    emblaApi.scrollTo(activeIndex, false); // Postavljamo početnu sliku bez animacije
+    emblaMainApi.scrollTo(activeIndex, false);
+    const onSelect = () => setActiveIndex(emblaMainApi.selectedScrollSnap());
+    emblaMainApi.on("select", onSelect);
 
-    const onSelect = () => setActiveIndex(emblaApi.selectedScrollSnap());
-    emblaApi.on("select", onSelect);
+    return () => emblaMainApi.off("select", onSelect);
+  }, [emblaMainApi]);
 
-    return () => {
-      if (emblaApi) emblaApi.off("select", onSelect);
-    };
-  }, [emblaApi]);
-
-  // Funkcija za klizanje bez dodatnih opcija
   const scrollTo = useCallback(
     (index: number) => {
-      if (emblaApi) {
-        setTimeout(() => {
-          emblaApi.scrollTo(index, false); // Normalno skrolovanje bez animacije
-        }, 10);
+      if (emblaMainApi) {
+        emblaMainApi.scrollTo(index);
+        setActiveIndex(index);
       }
     },
-    [emblaApi]
+    [emblaMainApi]
   );
 
   return (
-    <div className="w-full max-w-2xl mx-auto relative">
+    <div className="relative">
       {/* Glavni slider */}
-      <div className="overflow-hidden relative rounded-lg" ref={emblaRef}>
-        <div className="flex transition-transform duration-100 ease-in-out">
+      <div className="overflow-hidden" ref={emblaMainRef}>
+        <div className="flex">
           {images.map((src, index) => (
             <div key={index} className="min-w-full">
-              <img
+              <Image
                 src={src}
-                alt={`Slika ${index + 1}`}
-                className="w-full h-screen object-cover rounded-lg"
+                width={1500}
+                height={1000}
+                alt="kupaci bliss"
+                className="w-full h-screen object-cover"
               />
             </div>
           ))}
         </div>
+      </div>
 
-        {/* Thumbnails preko slike */}
-        <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex gap-2 bg-black/50 p-2 rounded-lg">
-          {images.map((src, index) => (
-            <button
-              key={index}
-              onClick={() => scrollTo(index)}
-              className={`w-16 h-16 border-2 rounded-md overflow-hidden transition ${
-                activeIndex === index ? "border-blue-500" : "border-gray-300"
-              }`}
-            >
-              <img
-                src={src}
-                alt={`Thumbnail ${index + 1}`}
-                className="w-full h-full object-cover"
-              />
-            </button>
-          ))}
+      {/* Thumbnail slider */}
+      <div className="relative mt-4">
+        {/* Strelica levo */}
+        <button
+          onClick={() => emblaThumbApi && emblaThumbApi.scrollPrev()}
+          className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 shadow-md z-10"
+        >
+          ◀
+        </button>
+
+        {/* Slider sa vidljivih 5-6 slika */}
+        <div className="overflow-hidden w-full" ref={emblaThumbRef}>
+          <div className="flex">
+            {images.map((src, index) => (
+              <button
+                key={index}
+                onClick={() => scrollTo(index)}
+                className={`border-2 overflow-hidden transition min-w-32 mx-3 ${
+                  activeIndex === index ? "border-blue-500" : "border-gray-300"
+                }`}
+              >
+                <Image
+                  src={src}
+                  width={100}
+                  height={100}
+                  alt="kupaci bliss"
+                  className="w-40 h-40 object-cover"
+                />
+              </button>
+            ))}
+          </div>
         </div>
+
+        {/* Strelica desno */}
+        <button
+          onClick={() => emblaThumbApi && emblaThumbApi.scrollNext()}
+          className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-2 shadow-md z-10"
+        >
+          ▶
+        </button>
       </div>
     </div>
   );

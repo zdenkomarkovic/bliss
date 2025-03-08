@@ -13,30 +13,30 @@ export const navList = [
     title: "Početna",
     link: "/",
   },
+  // {
+  //   title: "Usluge",
+  //   list: [
+  //     {
+  //       title: "Kuhinje",
+  //       link: "",
+  //     },
+  //     {
+  //       title: "Plakari",
+  //       link: "",
+  //     },
+  //     {
+  //       title: "TV Komode",
+  //       link: "",
+  //     },
+  //     {
+  //       title: "Projektovanje Enterijera",
+  //       link: "",
+  //     },
+  //   ],
+  // },
   {
-    title: "Usluge",
-    list: [
-      {
-        title: "Kuhinje",
-        link: "",
-      },
-      {
-        title: "Plakari",
-        link: "",
-      },
-      {
-        title: "TV Komode",
-        link: "",
-      },
-      {
-        title: "Projektovanje Enterijera",
-        link: "",
-      },
-    ],
-  },
-  {
-    title: "Proizvodi",
-    link: "/proizvodi",
+    title: "Kolekcije",
+    link: "/products",
   },
   {
     title: "Kontakt",
@@ -274,30 +274,121 @@ export const cards2DataText: Cards2DataText = {
 };
 
 export interface Colections {
+  id: number;
   title: string;
   price: number;
-  img: string;
+  img: string[];
+  description1: string;
+  description2: string;
+  colors: string;
+  colorsImg: string;
+  size: string;
+  sizeImg: string;
 }
 
 export const colections: Colections[] = [
   {
+    id: 1,
     title: "BEACH BABE",
     price: 200,
-    img: "/BEACH BABE 1 color NEON YELLOW-min.jpg",
+    img: [
+      "/BEACH BABE 1 color NEON YELLOW-min.jpg",
+      "/BEACH BABE 2.1 color NEON ORANGE-min.jpg",
+      "/BEACH BABE 3 color NEON ORANGE-min.jpg",
+      "/BEACH BABE 4 color NEON ORANGE-min.jpg",
+      "/BEACH BABE 4-ispis-min.jpg",
+      "/visual double beach babe 1-min.jpg",
+    ],
+    description1:
+      "BEACH BABE bokserice sa jednostavnim dizajnom i podesivim vezicama garantuju savrseno prijanjanje.",
+    description2:
+      "Napravljene o laganog materijala koji omogucava potpunu slobodu pokreta i udobnost tokom celog dana.",
+    colors: "DOSTUPNE U 5 BOJA ",
+    colorsImg: "/KARTA BOJA- BEACH BABE-min.jpg",
+    size: "DOSTUPNE VELICINE: S, M, L, XL",
+    sizeImg: "/TABELA VELICINA.png",
   },
   {
+    id: 2,
     title: "BREEZE",
     price: 200,
-    img: "/BEACH BABE 1 color NEON YELLOW-min.jpg",
+    img: [
+      "/BREEZE 1 color BLACK-min.jpg",
+      "/BREEZE 2 color BLACK-min.jpg",
+      "/BREEZE 3 color BLACK-min.jpg",
+      "/BREEZE 4color BLACK-min.jpg",
+      "/BREEZE 5 color BLACK-min.jpg",
+      "/BREEZE 6 color BLACK-min.jpg",
+      "/visual double breeze-double trouble-min.jpg",
+    ],
+    description1:
+      "BREEZE bikini model dizajniran je za minimalnu pokrivenost uz maksimalnu udobnost.",
+    description2:
+      "Lagan materjal obezbedjuje potpunu slobodu pokreta, pruzajuci savsrsen osecaj tokom nosenja.",
+    colors: "DOSTUPNE U JEDNOJ BOJI.",
+    colorsImg: "/KARTA BOJA- BREEZE-min.jpg",
+    size: "DOSTUPNE VELICINE: S, M, L, XL",
+    sizeImg: "/TABELA VELICINA.png",
   },
   {
+    id: 3,
     title: "SHORTS",
     price: 200,
-    img: "/BEACH BABE 1 color NEON YELLOW-min.jpg",
+    img: [
+      "/SHORTS 1.1 color WHITE-min.jpg",
+      "/SHORTS 1.4 color WHITE-min.jpg",
+      "/SHORTS 2 color NEON CORAL-min.jpg",
+      "/SHORTS 3 color BLACK-min.jpg",
+      "/SHORTS 4 color ROSE-min.jpg",
+      "/SHORTS 4.1 color ROSE-min.jpg",
+      "/SHORTS 4.2 color ROSE-min.jpg",
+      "/visual double shorts 1-min.jpg",
+    ],
+    description1:
+      "SHORTS za kupanje je napravljen od izuzetno laganog materijala koji se ne oseca na kozi, puzajuci udobnost tokom celog dana.",
+    description2:
+      "Postavljen je mrezicom koja dodatno povecava prijatnost i podrsku.",
+    colors: "DOSTUPAN U 6 BOJA",
+    colorsImg: "/KARTA BOJA- SHORTS-min.jpg",
+    size: "DOSTUPNE VELICINE: S|M, L|XL",
+    sizeImg: "/TABELA VELICINA.png",
   },
   {
+    id: 4,
     title: "THE OG",
     price: 200,
-    img: "/BEACH BABE 1 color NEON YELLOW-min.jpg",
+    img: [
+      "/THE OG 1 color MAGENTA-min.jpg",
+      "/THE OG 1.1 color MAGENTA-min.jpg",
+      "/THE OG 1.2 color MAGENTA-min.jpg",
+      "/THE OG 2.1 color TIFFANY BLUE-min.jpg",
+      "/THE OG 2.2 color TIFFANY BLUE-min.jpg",
+      "/THE OG 2.3 color TIFFANY BLUE-min.jpg",
+      "/THE OG 2.5 color TIFFANY BLUE-min.jpg",
+      "/THE OG 3 color WHITE-min.jpg",
+      "/THE OG 3.1 color WHITE-min.jpg",
+      "/THE OG 3.2 color WHITE-min.jpg",
+      "/THE OG 3.3 color WHITE-min.jpg",
+      "/THE OG 4 color NUDE-min.jpg",
+      "/THE OG 4.1 color NUDE-min.jpg",
+      "/THE OG 5 color GREEN-min.jpg",
+      "/THE OG 5.1 color GREEN-min.jpg",
+      "/THE OG 6 color ROSE-min.jpg",
+      "/THE OG 6.1 color ROSE-min.jpg",
+      "/THE OG 6.2 color ROSE-min.jpg",
+      "/THE OG Rose and Tiffany blue-min.jpg",
+      "/visual double the og 1-min.jpg",
+      "/visual double the og 2-min.jpg",
+      "/visual double the og 3-min.jpg",
+      "/visual the og-min.jpg",
+    ],
+    description1:
+      "THE OG su udobne kupace gace u brief modelu sa podesivim vezicama za savrseno prijanjanje.",
+    description2:
+      "Napravljene od laganog, brzosuseceg materijalakoji pruza maksimalnu udobnost tokom nosenja. Bestseler brenda.",
+    colors: "DOSTUPNE U 9 BOJA",
+    colorsImg: "/KARTA BOJA-THE OG-min.jpg",
+    size: "DOSTUPNE VELICINE: S, M, L, XL",
+    sizeImg: "/TABELA VELICINA.png",
   },
 ];
