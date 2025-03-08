@@ -30,7 +30,7 @@ const ImageSliderKlizni = ({ images }: { images: string[] }) => {
         setActiveIndex(index);
       }
     },
-    [emblaMainApi]
+    [emblaMainApi, activeIndex]
   );
 
   return (

@@ -5,7 +5,7 @@ import Image from "@/node_modules/next/image";
 import { notFound, useParams } from "@/node_modules/next/navigation";
 import React from "react";
 
-const page = () => {
+const Page = () => {
   const params = useParams();
   const id = typeof params.id === "string" ? parseInt(params.id) : 0;
   const product = colections.find((c) => c.id === id);
@@ -18,7 +18,7 @@ const page = () => {
       <div className="md:w-1/2">
         <ImageSliderKlizni images={images} />
       </div>
-      <div className="md:w-1/2 py-36 px-16">
+      <div className="md:w-1/2 md:py-36 md:px-16">
         <h1 className="text-6xl">{product.title}</h1>
         <p className="text-2xl"> din.{product.price}.00</p>
         <p>{product.description1}</p>
@@ -35,4 +35,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
