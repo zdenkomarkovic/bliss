@@ -21,7 +21,7 @@ const ImageSliderKlizni = ({ images }: { images: string[] }) => {
     emblaMainApi.on("select", onSelect);
 
     return () => emblaMainApi.off("select", onSelect);
-  }, [emblaMainApi]);
+  }, [emblaMainApi, activeIndex]);
 
   const scrollTo = useCallback(
     (index: number) => {
@@ -30,7 +30,7 @@ const ImageSliderKlizni = ({ images }: { images: string[] }) => {
         setActiveIndex(index);
       }
     },
-    [emblaMainApi, activeIndex]
+    [emblaMainApi]
   );
 
   return (
