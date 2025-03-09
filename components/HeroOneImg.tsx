@@ -2,9 +2,6 @@
 
 import Hero3 from "../public/visual- izgled feeda 2-min.jpg";
 import Image from "next/image";
-import { ArrowRightIcon } from "lucide-react";
-import Link from "next/link";
-import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
