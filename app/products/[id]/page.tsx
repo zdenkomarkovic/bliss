@@ -4,11 +4,13 @@ import { colections } from "@/constants/index";
 import Image from "@/node_modules/next/image";
 import Link from "@/node_modules/next/link";
 import { notFound, useParams } from "@/node_modules/next/navigation";
-import React from "react";
+import React, { useState } from "react";
 import { PhoneIcon } from "lucide-react";
 import { motion } from "framer-motion";
+import { TbRulerMeasure2 } from "react-icons/tb";
 
 const Page = () => {
+  const [showSize, setShowSize] = useState(false);
   const params = useParams();
   const id = typeof params.id === "string" ? parseInt(params.id) : 0;
   const product = colections.find((c) => c.id === id);
@@ -54,6 +56,7 @@ const Page = () => {
         </p>
 
         <div className="flex gap-3 items-center">
+          <p className="text-sm md:text-xl first-letter:pl-4">Size:</p>
           {product.size.map((item, i) => {
             return (
               <p
@@ -65,20 +68,27 @@ const Page = () => {
             );
           })}
         </div>
+        <p
+          onClick={() => setShowSize((prev) => !prev)}
+          className="text-sm md:text-2xl pl-4 flex gap-3 items-center underline text-primary"
+        >
+          Size guide
+          <TbRulerMeasure2 />
+        </p>
         <div className="grid grid-cols-2 gap-2">
           <Image
             src={product.colorsImg}
             width={300}
             height={1000}
             alt="kupace gace"
-            className="w-full h-auto object-cover"
+            className={`w-full h-auto object-cover `}
           />
           <Image
             src={product.sizeImg}
             width={300}
             height={1000}
             alt="kupace gace"
-            className="w-full h-auto object-cover"
+            className={`w-full h-auto object-cover ${showSize ? "" : "hidden"}`}
           />
         </div>
       </div>
