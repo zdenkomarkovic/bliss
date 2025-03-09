@@ -23,14 +23,14 @@ const Page = () => {
       </div>
       <div className="md:w-1/2  md:py-36 md:px-16 space-y-3 py-5">
         <div className="space-y-3 ">
-          <h1 className="text-2xl md:text-6xl">
+          <h1 className="text-2xl md:text-6xl text-primary flex gap-3 items-center">
             {product.title}
-            <span className="text-xl md:text-2xl">
+            <span className="text-muted text-xl md:text-2xl">
               {" "}
               - din.{product.price}.00
             </span>
           </h1>
-          <div className="flex mx-auto gap-3 items-center justify-center">
+          <div className="flex mx-auto gap-3 text-xl items-center ">
             <p>Nazovite i narucite</p>
             <Link href="tel:+3816">
               <motion.button
@@ -52,7 +52,22 @@ const Page = () => {
         <p className="text-sm md:text-xl first-letter:pl-4">
           {product.description2}
         </p>
-        <p className="text-sm md:text-xl first-letter:pl-4">{product.size}</p>
+
+        <div className="flex gap-3 items-center">
+          <p className="text-sm md:text-xl pr-5 font-bold">
+            DOSTUPNE VELICINE:
+          </p>
+          {product.size.map((item, i) => {
+            return (
+              <p
+                key={i}
+                className="text-sm md:text-xl bg-primary text-white px-5 py-1 rounded-full "
+              >
+                {item}
+              </p>
+            );
+          })}
+        </div>
         <div className="grid grid-cols-2 gap-2">
           <Image
             src={product.colorsImg}

@@ -282,7 +282,7 @@ export interface Colections {
   description2: string;
   colors: string;
   colorsImg: string;
-  size: string;
+  size: string[];
   sizeImg: string;
 }
 
@@ -305,7 +305,7 @@ export const colections: Colections[] = [
       "Napravljene o laganog materijala koji omogucava potpunu slobodu pokreta i udobnost tokom celog dana.",
     colors: "DOSTUPNE U 5 BOJA ",
     colorsImg: "/KARTA BOJA- BEACH BABE-min.jpg",
-    size: "DOSTUPNE VELICINE: S, M, L, XL",
+    size: [" S", " M", "L", "XL"],
     sizeImg: "/TABELA VELICINA.png",
   },
   {
@@ -327,7 +327,7 @@ export const colections: Colections[] = [
       "Lagan materjal obezbedjuje potpunu slobodu pokreta, pruzajuci savsrsen osecaj tokom nosenja.",
     colors: "DOSTUPNE U JEDNOJ BOJI.",
     colorsImg: "/KARTA BOJA- BREEZE-min.jpg",
-    size: "DOSTUPNE VELICINE: S, M, L, XL",
+    size: [" S", " M", "L", "XL"],
     sizeImg: "/TABELA VELICINA.png",
   },
   {
@@ -350,7 +350,7 @@ export const colections: Colections[] = [
       "Postavljen je mrezicom koja dodatno povecava prijatnost i podrsku.",
     colors: "DOSTUPAN U 6 BOJA",
     colorsImg: "/KARTA BOJA- SHORTS-min.jpg",
-    size: "DOSTUPNE VELICINE: S|M, L|XL",
+    size: ["S|M", "L|XL"],
     sizeImg: "/TABELA VELICINA.png",
   },
   {
@@ -388,7 +388,7 @@ export const colections: Colections[] = [
       "Napravljene od laganog, brzosuseceg materijalakoji pruza maksimalnu udobnost tokom nosenja. Bestseler brenda.",
     colors: "DOSTUPNE U 9 BOJA",
     colorsImg: "/KARTA BOJA-THE OG-min.jpg",
-    size: "DOSTUPNE VELICINE: S, M, L, XL",
+    size: [" S", " M", "L", "XL"],
     sizeImg: "/TABELA VELICINA.png",
   },
 ];
