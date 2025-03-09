@@ -6,8 +6,8 @@ import React from "react";
 const page = () => {
   return (
     <div className="py-24 container mx-auto px-2 md:px-4">
-      <h1 className="text-8xl text-center py-12 uppercase">Kupace gace</h1>
-      <div className="grid grid-cols-4 auto-rows-fr">
+      <h1 className="text-8xl text-center py-12 uppercase">Bliss</h1>
+      <div className="grid md:grid-cols-4 auto-rows-fr">
         {colections.map((item, i) => {
           return (
             <Link
@@ -22,7 +22,7 @@ const page = () => {
                 alt="kupace gace"
                 className="w-full h-full object-cover"
               />
-              <div className="p-10">
+              <div className="p-5 md:p-10">
                 <h4 className="text-2xl font-bold">{item.title}</h4>
                 <p className="text-xl">din.{item.price}.00</p>
               </div>

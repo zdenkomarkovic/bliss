@@ -73,7 +73,7 @@ const ImageSliderKlizni = ({ images }: { images: string[] }) => {
               <button
                 key={index}
                 onClick={() => scrollTo(index)}
-                className={`border-2 overflow-hidden transition min-w-32 mx-3 ${
+                className={`border-2 overflow-hidden transition min-w-32 md:mx-3 ${
                   activeIndex === index ? "border-blue-500" : "border-gray-300"
                 }`}
               >
