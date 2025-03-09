@@ -54,9 +54,6 @@ const Page = () => {
         </p>
 
         <div className="flex gap-3 items-center">
-          <p className="text-sm md:text-xl pr-5 font-bold">
-            DOSTUPNE VELICINE:
-          </p>
           {product.size.map((item, i) => {
             return (
               <p
