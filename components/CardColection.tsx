@@ -20,10 +20,10 @@ const CardColection = ({
           </h2>
           <Link
             href={"/products"}
-            className=" group text-md md:text-3xl rounded-full bg-primary text-white flex gap-2 hover:scale-105 transition-all duration-300 items-center px-2 py-2 md:px-8 md:py-4 border"
+            className=" group text-md md:text-3xl rounded-full bg-primary text-white flex gap-2 hover:scale-105 transition-all duration-300 items-center px-4 py-2 md:px-8 md:py-4 border"
           >
             {" "}
-            Vidite sve proizvode
+            View All
             <ArrowRightIcon className="text-8xl translate-x-[-5px] group-hover:translate-x-0 transition-all duration-300" />
           </Link>
         </div>

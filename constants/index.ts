@@ -280,7 +280,7 @@ export interface Colections {
   img: string[];
   description1: string;
   description2: string;
-  colors: string;
+  colors: { color: string }[];
   colorsImg: string;
   size: string[];
   sizeImg: string;
@@ -303,7 +303,13 @@ export const colections: Colections[] = [
       "BEACH BABE bokserice sa jednostavnim dizajnom i podesivim vezicama garantuju savrseno prijanjanje.",
     description2:
       "Napravljene o laganog materijala koji omogucava potpunu slobodu pokreta i udobnost tokom celog dana.",
-    colors: "DOSTUPNE U 5 BOJA ",
+    colors: [
+      { color: "black" },
+      { color: "white" },
+      { color: "neon yellow" },
+      { color: "neon orange" },
+      { color: "neon pink" },
+    ],
     colorsImg: "/KARTA BOJA- BEACH BABE-min.jpg",
     size: [" S", " M", "L", "XL"],
     sizeImg: "/TABELA VELICINA.png",
@@ -325,7 +331,13 @@ export const colections: Colections[] = [
       "BREEZE bikini model dizajniran je za minimalnu pokrivenost uz maksimalnu udobnost.",
     description2:
       "Lagan materjal obezbedjuje potpunu slobodu pokreta, pruzajuci savsrsen osecaj tokom nosenja.",
-    colors: "DOSTUPNE U JEDNOJ BOJI.",
+    colors: [
+      { color: "black" },
+      { color: "white" },
+      { color: "neon yellow" },
+      { color: "neon orange" },
+      { color: "neon pink" },
+    ],
     colorsImg: "/KARTA BOJA- BREEZE-min.jpg",
     size: [" S", " M", "L", "XL"],
     sizeImg: "/TABELA VELICINA.png",
@@ -348,7 +360,13 @@ export const colections: Colections[] = [
       "SHORTS za kupanje je napravljen od izuzetno laganog materijala koji se ne oseca na kozi, puzajuci udobnost tokom celog dana.",
     description2:
       "Postavljen je mrezicom koja dodatno povecava prijatnost i podrsku.",
-    colors: "DOSTUPAN U 6 BOJA",
+    colors: [
+      { color: "black" },
+      { color: "white" },
+      { color: "neon yellow" },
+      { color: "neon orange" },
+      { color: "neon pink" },
+    ],
     colorsImg: "/KARTA BOJA- SHORTS-min.jpg",
     size: ["S|M", "L|XL"],
     sizeImg: "/TABELA VELICINA.png",
@@ -386,7 +404,13 @@ export const colections: Colections[] = [
       "THE OG su udobne kupace gace u brief modelu sa podesivim vezicama za savrseno prijanjanje.",
     description2:
       "Napravljene od laganog, brzosuseceg materijalakoji pruza maksimalnu udobnost tokom nosenja. Bestseler brenda.",
-    colors: "DOSTUPNE U 9 BOJA",
+    colors: [
+      { color: "black" },
+      { color: "white" },
+      { color: "neon yellow" },
+      { color: "neon orange" },
+      { color: "neon pink" },
+    ],
     colorsImg: "/KARTA BOJA-THE OG-min.jpg",
     size: [" S", " M", "L", "XL"],
     sizeImg: "/TABELA VELICINA.png",
