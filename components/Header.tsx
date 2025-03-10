@@ -93,20 +93,20 @@ export default function Header() {
         <Link href="/" className="">
           <Image
             src={Logo}
-            alt="dm rustic 24"
+            alt="bliss"
             width={50}
             height={50}
-            className="rounded-full"
+            className="rounded-full hover:scale-105"
           />
         </Link>
         <DesktopNav />
         <Link href="tel:+3816">
           <motion.button
             whileHover={{
-              color: "hsl(var(--foreground))",
+              color: "hsl(var(--white))",
               backgroundColor: "hsl(var(--primary))",
             }}
-            className=" items-center justify-center rounded-full  border-muted border-2 text-sm md:text-lg py-1 px-2 md:py-2 md:px-4 transition-colors flex"
+            className=" items-center justify-center rounded-full  border-muted hover:border-white border-2 text-sm md:text-lg py-1 px-2 md:py-2 md:px-4 transition-colors flex"
           >
             <PhoneIcon />
             <p className="">+38160 000 000</p>

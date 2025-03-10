@@ -23,7 +23,7 @@ const Page = () => {
       <div className="md:w-1/2">
         <ImageSliderKlizni images={images} />
       </div>
-      <div className="md:w-1/2  md:py-36 md:px-16 space-y-3 py-5">
+      <div className="md:w-1/2  md:py-36 md:px-16 space-y-8 py-5">
         <div className="space-y-3 ">
           <h1 className="text-2xl md:text-6xl text-primary flex gap-3 items-center">
             {product.title}
@@ -68,21 +68,37 @@ const Page = () => {
             );
           })}
         </div>
+
+        <div className="flex gap-2 md:gap-5 flex-wrap">
+          {product.colors.map((color, i) => {
+            return (
+              <div
+                key={i}
+                className=" flex gap-2 items-center border p-1 md:p-2 rounded-full text-sm md:text-md"
+              >
+                <div
+                  className={`w-6 md:w-8 h-6 md:h-8 rounded-full ${color.color} border`}
+                ></div>
+                <p className="text-wrap">{color.color}</p>
+              </div>
+            );
+          })}
+        </div>
         <p
           onClick={() => setShowSize((prev) => !prev)}
-          className="text-sm md:text-2xl pl-4 flex gap-3 items-center underline text-primary"
+          className="text-sm md:text-2xl pl-4 flex gap-3 items-center underline cursor-pointer text-primary"
         >
           Size guide
           <TbRulerMeasure2 />
         </p>
         <div className="grid grid-cols-2 gap-2">
-          <Image
+          {/* <Image
             src={product.colorsImg}
             width={300}
             height={1000}
             alt="kupace gace"
             className={`w-full h-auto object-cover `}
-          />
+          /> */}
           <Image
             src={product.sizeImg}
             width={300}

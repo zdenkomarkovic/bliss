@@ -8,6 +8,7 @@ body {
 
 @layer base {
   :root {
+    --white: 0, 0%, 100%;
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
@@ -78,4 +79,49 @@ body {
 }
 .scrollToTopButton.visible {
   opacity: 1;
+}
+.white {
+  background-color: white;
+}
+.black {
+  background-color: black;
+}
+.neon-yellow {
+  background-color: #f1e746;
+}
+.neon-orange {
+  background-color: #e85724;
+}
+.neon-pink {
+  background-color: #e62b7e;
+}
+.gold {
+  background-color: #d7af61;
+}
+.olive-green {
+  background-color: #424b2f;
+}
+.rose {
+  background-color: #ef7897;
+}
+.neon-coral {
+  background-color: #e55858;
+}
+.nude {
+  background-color: #edc49d;
+}
+.gray {
+  background-color: #a1a0a5;
+}
+.green {
+  background-color: #667c57;
+}
+.magenta {
+  background-color: #852541;
+}
+.tiffany-blue {
+  background-color: #86cacc;
+}
+.yellow {
+  background-color: #fff9bb;
 }
