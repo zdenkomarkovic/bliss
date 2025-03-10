@@ -66,7 +66,7 @@ export default function Footer() {
                 <Facebook />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/blisscollectionofficial/"
                 target={"_blank"}
                 className="text-muted-foreground hover:text-primary"
               >
