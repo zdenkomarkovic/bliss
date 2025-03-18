@@ -290,7 +290,7 @@ export const colections: Colections[] = [
   {
     id: 1,
     title: "THE OG",
-    price: 200,
+    price: 3.49,
     img: [
       "/THE OG 1 color MAGENTA-min.jpg",
       "/THE OG 1.1 color MAGENTA-min.jpg",
@@ -338,7 +338,7 @@ export const colections: Colections[] = [
   {
     id: 2,
     title: "BEACH BABE",
-    price: 200,
+    price: 3490,
     img: [
       "/BEACH BABE 1 color NEON YELLOW-min.jpg",
       "/BEACH BABE 2.1 color NEON ORANGE-min.jpg",
@@ -365,7 +365,7 @@ export const colections: Colections[] = [
   {
     id: 3,
     title: "BREEZE",
-    price: 200,
+    price: 3490,
     img: [
       "/BREEZE 1 color BLACK-min.jpg",
       "/BREEZE 2 color BLACK-min.jpg",
@@ -387,7 +387,7 @@ export const colections: Colections[] = [
   {
     id: 4,
     title: "SHORTS",
-    price: 200,
+    price: 3790,
     img: [
       "/SHORTS 1.1 color WHITE-min.jpg",
       "/SHORTS 1.4 color WHITE-min.jpg",

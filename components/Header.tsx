@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Logo from "../public/Screenshot_20250309_214159_Instagram.jpg";
+import Logo from "../public/logo bliss.svg";
 import Link from "next/link";
 // import {
 //   MenuIcon,
