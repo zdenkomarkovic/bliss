@@ -17,7 +17,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Bliss Collection Official",
-  description: "Bliss Collection Official – ekskluzivni muški kupaći kostimi vrhunskog dizajna. Kombinacija stila, komfora i luksuza. Poručite odmah,
+  description:
+    "Bliss Collection Official – ekskluzivni muški kupaći kostimi vrhunskog dizajna. Kombinacija stila, komfora i luksuza. Poručite odmah",
   icons: {
     icon: "/logo bliss.svg",
     apple: "/logo bliss.svg",
