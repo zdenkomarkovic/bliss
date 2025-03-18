@@ -21,7 +21,7 @@ export default function Footer() {
                 </Link>
               </li>
 
-              <li>
+              {/* <li>
                 <Link
                   href="/usluge"
                   className="text-muted-foreground hover:text-primary"
@@ -37,12 +37,12 @@ export default function Footer() {
                 >
                   Kontakt
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
           <div className="space-y-3 pb-5 md:pb-0">
-            <div>
+            {/* <div>
               {" "}
               <a href="tel:+38160 000 000">
                 <p className="text-muted-foreground  hover:text-primary">
@@ -56,15 +56,15 @@ export default function Footer() {
                   Email: starter mail
                 </p>
               </a>
-            </div>
+            </div> */}
             <div className="flex space-x-4 justify-center md:justify-start">
-              <a
+              {/* <a
                 href="#"
                 target={"_blank"}
                 className="text-muted-foreground hover:text-primary"
               >
                 <Facebook />
-              </a>
+              </a> */}
               <a
                 href="https://www.instagram.com/blisscollectionofficial/"
                 target={"_blank"}
@@ -76,10 +76,10 @@ export default function Footer() {
           </div>
           <div className="md:col-span-1 col-span-2 text-center text-primary">
             <h3 className="text-lg font-semibold mb-2 md:mb-4">
-              starter naslov
+              Bliss Collection official
             </h3>
 
-            <p className=" font-bold ">starter poruka</p>
+            <p className=" font-bold ">Exclusive Swimwear</p>
           </div>
         </div>
 

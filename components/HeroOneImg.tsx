@@ -28,7 +28,7 @@ const Hero = () => {
             BLISS
           </span>
         </h1>
-        <h2 className="mt-36 text-white md:text-9xl text-4xl px-4">
+        <h2 className="mt-36 md:mt-0 text-white md:text-9xl text-4xl px-4">
           Uskoro...
         </h2>
       </div>

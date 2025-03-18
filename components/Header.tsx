@@ -3,70 +3,70 @@
 import Image from "next/image";
 import Logo from "../public/Screenshot_20250309_214159_Instagram.jpg";
 import Link from "next/link";
-import {
-  MenuIcon,
-  //  PhoneIcon
-} from "lucide-react";
+// import {
+//   MenuIcon,
+//    PhoneIcon
+// } from "lucide-react";
 
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+// import {
+//   Sheet,
+//   SheetContent,
+//   SheetHeader,
+//   SheetTitle,
+//   SheetTrigger,
+// } from "@/components/ui/sheet";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { navList } from "@/constants/index";
+// import { navList } from "@/constants/index";
 
-const mobTitleStyles = "text-lg py-2";
+// const mobTitleStyles = "text-lg py-2";
 
-const MobileMenu = () => (
-  <Sheet>
-    <SheetTrigger className="lg:hidden">
-      <MenuIcon className="text-primary cursor-pointer" />
-    </SheetTrigger>
-    <SheetContent>
-      <SheetHeader>
-        <SheetTitle></SheetTitle>
-        <SheetContent>
-          <ul>
-            {navList.map((item, index) => {
-              return (
-                <Link key={index} href={item.link}>
-                  <motion.li
-                    whileHover={{ color: "hsl(var(--primary))" }}
-                    className={mobTitleStyles}
-                  >
-                    <SheetTrigger>{item.title}</SheetTrigger>
-                  </motion.li>
-                </Link>
-              );
-            })}
-          </ul>
-        </SheetContent>
-      </SheetHeader>
-    </SheetContent>
-  </Sheet>
-);
+// const MobileMenu = () => (
+//   <Sheet>
+//     <SheetTrigger className="lg:hidden">
+//       <MenuIcon className="text-primary cursor-pointer" />
+//     </SheetTrigger>
+//     <SheetContent>
+//       <SheetHeader>
+//         <SheetTitle></SheetTitle>
+//         <SheetContent>
+//           <ul>
+//             {navList.map((item, index) => {
+//               return (
+//                 <Link key={index} href={item.link}>
+//                   <motion.li
+//                     whileHover={{ color: "hsl(var(--primary))" }}
+//                     className={mobTitleStyles}
+//                   >
+//                     <SheetTrigger>{item.title}</SheetTrigger>
+//                   </motion.li>
+//                 </Link>
+//               );
+//             })}
+//           </ul>
+//         </SheetContent>
+//       </SheetHeader>
+//     </SheetContent>
+//   </Sheet>
+// );
 
-const DesktopNav = () => (
-  <ul className="hidden gap-8 lg:flex  text-xl">
-    {navList.map((item, index) => {
-      return (
-        <Link key={index} href={item.link}>
-          <motion.li
-            className="transition-colors underline-animation"
-            whileHover={{ color: "hsl(var(--primary))", scale: 1.1 }}
-          >
-            {item.title}
-          </motion.li>
-        </Link>
-      );
-    })}
-  </ul>
-);
+// const DesktopNav = () => (
+//   <ul className="hidden gap-8 lg:flex  text-xl">
+//     {navList.map((item, index) => {
+//       return (
+//         <Link key={index} href={item.link}>
+//           <motion.li
+//             className="transition-colors underline-animation"
+//             whileHover={{ color: "hsl(var(--primary))", scale: 1.1 }}
+//           >
+//             {item.title}
+//           </motion.li>
+//         </Link>
+//       );
+//     })}
+//   </ul>
+// );
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
