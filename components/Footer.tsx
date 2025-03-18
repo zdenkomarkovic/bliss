@@ -1,7 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Facebook, Instagram } from "lucide-react";
+import {
+  //  Facebook,
+  Instagram,
+} from "lucide-react";
 
 export default function Footer() {
   return (
@@ -76,7 +79,7 @@ export default function Footer() {
           </div>
           <div className="md:col-span-1 col-span-2 text-center text-primary">
             <h3 className="text-lg font-semibold mb-2 md:mb-4">
-              Bliss Collection official
+              Bliss Collection Official
             </h3>
 
             <p className=" font-bold ">Exclusive Swimwear</p>
@@ -84,7 +87,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col md:flex-row justify-center gap-2 md:gap-10 border-t-[1px] border-cool-green mt-10 pt-5">
-          <p>&copy; 2025 _________. Sva prava zadržana.</p>
+          <p>&copy; 2025 BlissOfficial. Sva prava zadržana.</p>
           <a href="https://www.manikamwebsolutions.com/" target="_blank">
             izrada sajta:{" "}
             <span className="font-bold text-primary"> ManikamWebSolutions</span>
