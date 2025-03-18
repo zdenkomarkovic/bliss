@@ -289,85 +289,6 @@ export interface Colections {
 export const colections: Colections[] = [
   {
     id: 1,
-    title: "BEACH BABE",
-    price: 200,
-    img: [
-      "/BEACH BABE 1 color NEON YELLOW-min.jpg",
-      "/BEACH BABE 2.1 color NEON ORANGE-min.jpg",
-      "/BEACH BABE 3 color NEON ORANGE-min.jpg",
-      "/BEACH BABE 4 color NEON ORANGE-min.jpg",
-      "/BEACH BABE 4-ispis-min.jpg",
-      "/visual double beach babe 1-min.jpg",
-    ],
-    description1:
-      "BEACH BABE bokserice sa jednostavnim dizajnom i podesivim vezicama garantuju savrseno prijanjanje.",
-    description2:
-      "Napravljene o laganog materijala koji omogucava potpunu slobodu pokreta i udobnost tokom celog dana.",
-    colors: [
-      { color: "black" },
-      { color: "white" },
-      { color: "neon-yellow" },
-      { color: "neon-orange" },
-      { color: "neon-pink" },
-    ],
-    colorsImg: "/KARTA BOJA- BEACH BABE-min.jpg",
-    size: [" S", " M", "L", "XL"],
-    sizeImg: "/TABELA VELICINA.png",
-  },
-  {
-    id: 2,
-    title: "BREEZE",
-    price: 200,
-    img: [
-      "/BREEZE 1 color BLACK-min.jpg",
-      "/BREEZE 2 color BLACK-min.jpg",
-      "/BREEZE 3 color BLACK-min.jpg",
-      "/BREEZE 4color BLACK-min.jpg",
-      "/BREEZE 5 color BLACK-min.jpg",
-      "/BREEZE 6 color BLACK-min.jpg",
-      "/visual double breeze-double trouble-min.jpg",
-    ],
-    description1:
-      "BREEZE bikini model dizajniran je za minimalnu pokrivenost uz maksimalnu udobnost.",
-    description2:
-      "Lagan materjal obezbedjuje potpunu slobodu pokreta, pruzajuci savsrsen osecaj tokom nosenja.",
-    colors: [{ color: "black" }],
-    colorsImg: "/KARTA BOJA- BREEZE-min.jpg",
-    size: [" S", " M", "L", "XL"],
-    sizeImg: "/TABELA VELICINA.png",
-  },
-  {
-    id: 3,
-    title: "SHORTS",
-    price: 200,
-    img: [
-      "/SHORTS 1.1 color WHITE-min.jpg",
-      "/SHORTS 1.4 color WHITE-min.jpg",
-      "/SHORTS 2 color NEON CORAL-min.jpg",
-      "/SHORTS 3 color BLACK-min.jpg",
-      "/SHORTS 4 color ROSE-min.jpg",
-      "/SHORTS 4.1 color ROSE-min.jpg",
-      "/SHORTS 4.2 color ROSE-min.jpg",
-      "/visual double shorts 1-min.jpg",
-    ],
-    description1:
-      "SHORTS za kupanje je napravljen od izuzetno laganog materijala koji se ne oseca na kozi, puzajuci udobnost tokom celog dana.",
-    description2:
-      "Postavljen je mrezicom koja dodatno povecava prijatnost i podrsku.",
-    colors: [
-      { color: "black" },
-      { color: "white" },
-      { color: "gold" },
-      { color: "olive-green" },
-      { color: "rose" },
-      { color: "neon-coral" },
-    ],
-    colorsImg: "/KARTA BOJA- SHORTS-min.jpg",
-    size: ["S|M", "L|XL"],
-    sizeImg: "/TABELA VELICINA.png",
-  },
-  {
-    id: 4,
     title: "THE OG",
     price: 200,
     img: [
@@ -412,6 +333,85 @@ export const colections: Colections[] = [
     ],
     colorsImg: "/KARTA BOJA-THE OG-min.jpg",
     size: [" S", " M", "L", "XL"],
+    sizeImg: "/TABELA VELICINA.png",
+  },
+  {
+    id: 2,
+    title: "BEACH BABE",
+    price: 200,
+    img: [
+      "/BEACH BABE 1 color NEON YELLOW-min.jpg",
+      "/BEACH BABE 2.1 color NEON ORANGE-min.jpg",
+      "/BEACH BABE 3 color NEON ORANGE-min.jpg",
+      "/BEACH BABE 4 color NEON ORANGE-min.jpg",
+      "/BEACH BABE 4-ispis-min.jpg",
+      "/visual double beach babe 1-min.jpg",
+    ],
+    description1:
+      "BEACH BABE bokserice sa jednostavnim dizajnom i podesivim vezicama garantuju savrseno prijanjanje.",
+    description2:
+      "Napravljene o laganog materijala koji omogucava potpunu slobodu pokreta i udobnost tokom celog dana.",
+    colors: [
+      { color: "black" },
+      { color: "white" },
+      { color: "neon-yellow" },
+      { color: "neon-orange" },
+      { color: "neon-pink" },
+    ],
+    colorsImg: "/KARTA BOJA- BEACH BABE-min.jpg",
+    size: [" S", " M", "L", "XL"],
+    sizeImg: "/TABELA VELICINA.png",
+  },
+  {
+    id: 3,
+    title: "BREEZE",
+    price: 200,
+    img: [
+      "/BREEZE 1 color BLACK-min.jpg",
+      "/BREEZE 2 color BLACK-min.jpg",
+      "/BREEZE 3 color BLACK-min.jpg",
+      "/BREEZE 4color BLACK-min.jpg",
+      "/BREEZE 5 color BLACK-min.jpg",
+      "/BREEZE 6 color BLACK-min.jpg",
+      "/visual double breeze-double trouble-min.jpg",
+    ],
+    description1:
+      "BREEZE bikini model dizajniran je za minimalnu pokrivenost uz maksimalnu udobnost.",
+    description2:
+      "Lagan materjal obezbedjuje potpunu slobodu pokreta, pruzajuci savsrsen osecaj tokom nosenja.",
+    colors: [{ color: "black" }],
+    colorsImg: "/KARTA BOJA- BREEZE-min.jpg",
+    size: ["S", " M", "L", "XL"],
+    sizeImg: "/TABELA VELICINA.png",
+  },
+  {
+    id: 4,
+    title: "SHORTS",
+    price: 200,
+    img: [
+      "/SHORTS 1.1 color WHITE-min.jpg",
+      "/SHORTS 1.4 color WHITE-min.jpg",
+      "/SHORTS 2 color NEON CORAL-min.jpg",
+      "/SHORTS 3 color BLACK-min.jpg",
+      "/SHORTS 4 color ROSE-min.jpg",
+      "/SHORTS 4.1 color ROSE-min.jpg",
+      "/SHORTS 4.2 color ROSE-min.jpg",
+      "/visual double shorts 1-min.jpg",
+    ],
+    description1:
+      "SHORTS za kupanje je napravljen od izuzetno laganog materijala koji se ne oseca na kozi, puzajuci udobnost tokom celog dana.",
+    description2:
+      "Postavljen je mrezicom koja dodatno povecava prijatnost i podrsku.",
+    colors: [
+      { color: "black" },
+      { color: "white" },
+      { color: "gold" },
+      { color: "olive-green" },
+      { color: "rose" },
+      { color: "neon-coral" },
+    ],
+    colorsImg: "/KARTA BOJA- SHORTS-min.jpg",
+    size: ["S|M", "L|XL"],
     sizeImg: "/TABELA VELICINA.png",
   },
 ];

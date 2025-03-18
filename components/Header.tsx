@@ -3,7 +3,10 @@
 import Image from "next/image";
 import Logo from "../public/Screenshot_20250309_214159_Instagram.jpg";
 import Link from "next/link";
-import { MenuIcon, PhoneIcon } from "lucide-react";
+import {
+  MenuIcon,
+  //  PhoneIcon
+} from "lucide-react";
 
 import {
   Sheet,
@@ -99,7 +102,7 @@ export default function Header() {
             className="rounded-full hover:scale-105"
           />
         </Link>
-        <DesktopNav />
+        {/* <DesktopNav />
         <Link href="tel:+3816">
           <motion.button
             whileHover={{
@@ -112,7 +115,7 @@ export default function Header() {
             <p className="">+38160 000 000</p>
           </motion.button>
         </Link>
-        <MobileMenu />
+        <MobileMenu /> */}
       </nav>
     </header>
   );
